@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Code } from 'lucide-react';
-import CustomCursor from './CustomCursor';
+import TypingText from './TypingText';
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -47,7 +47,6 @@ const Hero: React.FC = () => {
       id="home" 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <CustomCursor />
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 opacity-90" />
       
       <div className="container px-6 py-8 md:py-16">
@@ -98,13 +97,15 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-                Yogapraveen R
-              </h1>
-              <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
-              <h2 className="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-8">
-                AI/ML & Full Stack Developer
-              </h2>
+            <TypingText
+              name="Yogapraveen R"
+              role="AI/ML & Full Stack Developer"
+              typingSpeed={90}
+              pauseBetween={800}
+              nameClassName="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2"
+              roleClassName="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-8"
+            />
+            <div className="h-1 w-20 bg-blue-500 mx-auto mb-6"></div>
             </motion.div>
 
             {/* Social Links */}

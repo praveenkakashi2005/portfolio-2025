@@ -1,3 +1,4 @@
+import ScorpionCursor from './components/ScorpionCursor';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeProvider } from './context/ThemeContext';
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <ScorpionCursor />
       <div className="min-h-screen transition-colors duration-300">
         <ScrollProgress />
         <Navbar />
