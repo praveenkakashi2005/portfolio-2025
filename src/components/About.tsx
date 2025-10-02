@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Code, Brain, Eye } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -31,7 +32,7 @@ const About: React.FC = () => {
     <section 
       id="about" 
       ref={aboutRef}
-      className="py-20 bg-gray-50 dark:bg-gray-800 opacity-0"
+      className="py-20 opacity-0"
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
@@ -42,18 +43,13 @@ const About: React.FC = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <p className="text-gray-700 dark:text-gray-300 text-lg mb-8 leading-relaxed">
-           I'm a passionate and driven Engineering student with a specialization in Machine Learning, Deep Learning, and Full Stack Development.
-            I’ve built a range of impactful projects — from a Deepfake Detection System using CNN, a women's safety application, to scalable web platforms using React.
-            js and Node.js — blending innovation with purpose. My goal is to turn complex problems into meaningful solutions.
-          </p>
+          <AnimatedParagraph className="text-gray-700 dark:text-gray-300 text-lg mb-8 leading-relaxed">
+            I'm a passionate and driven Engineering student with a specialization in Machine Learning, Deep Learning, and Full Stack Development. I’ve built a range of impactful projects — from a Deepfake Detection System using CNN, a women's safety application, to scalable web platforms using React.js and Node.js — blending innovation with purpose. My goal is to turn complex problems into meaningful solutions.
+          </AnimatedParagraph>
           
-          <p className="text-gray-700 dark:text-gray-300 text-lg mb-12 leading-relaxed">
-           My expanding skill set includes Prompt Engineering, Generative AI, and Project Management, backed by certifications from Microsoft, IBM, and LinkedIn. Technically, I work with Python, Java, CNN, NLP, and full-stack tools like MongoDB, React.js, and Node.js.
-            I’m proud to have won 1st Prize for the IoT project “Bheem Converter” and to have deployed deep learning models for real-world medical and safety use cases. I'm always looking to collaborate, intern, or contribute to innovative tech initiatives.
-
-
-          </p>
+          <AnimatedParagraph className="text-gray-700 dark:text-gray-300 text-lg mb-12 leading-relaxed">
+            My expanding skill set includes Prompt Engineering, Generative AI, and Project Management, backed by certifications from Microsoft, IBM, and LinkedIn. Technically, I work with Python, Java, CNN, NLP, and full-stack tools like MongoDB, React.js, and Node.js. I’m proud to have won 1st Prize for the IoT project “Bheem Converter” and to have deployed deep learning models for real-world medical and safety use cases. I'm always looking to collaborate, intern, or contribute to innovative tech initiatives.
+          </AnimatedParagraph>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md transition-transform hover:transform hover:scale-105">
@@ -95,6 +91,31 @@ const About: React.FC = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+// AnimatedParagraph for word-by-word animation
+const AnimatedParagraph: React.FC<{ children: string; className?: string }> = ({ children, className }) => {
+  const words = children.split(/(\s+)/);
+  return (
+    <motion.p
+      className={className}
+      initial="hidden"
+      animate="visible"
+      variants={{}}
+    >
+      {words.map((word, i) => (
+        <motion.span
+          key={i}
+          style={{ display: 'inline-block', whiteSpace: word.trim() === '' ? 'pre' : undefined }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.06, duration: 0.3 }}
+        >
+          {word}
+        </motion.span>
+      ))}
+    </motion.p>
   );
 };
 

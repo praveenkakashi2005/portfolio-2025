@@ -107,7 +107,7 @@ const Skills: React.FC = () => {
     <section 
       id="skills" 
       ref={skillsRef}
-      className="py-20 bg-white dark:bg-gray-900 opacity-0"
+      className="py-20 opacity-0"
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">

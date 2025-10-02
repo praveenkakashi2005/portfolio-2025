@@ -61,7 +61,7 @@ const Education: React.FC = () => {
     <section 
       id="education" 
       ref={educationRef}
-      className="py-20 bg-white dark:bg-gray-900 opacity-0"
+      className="py-20 opacity-0"
     >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
