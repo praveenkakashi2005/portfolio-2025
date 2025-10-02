@@ -27,11 +27,11 @@ const projectsData: Project[] = [
     category: "web"
   },
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce with authentication, cart, and payment processing.",
-    longDescription: "A complete e-commerce solution featuring user authentication, product catalog, shopping cart, and payment processing. Built with modern web technologies for a seamless shopping experience.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600",
-    tags: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    title: "E-commerce Website (MERN Stack)",
+    description: "Scalable MERN e-commerce with auth, cart, admin dashboard, and RBAC.",
+    longDescription: "Built a scalable full‑stack shopping platform using MongoDB, Express.js, React.js, and Node.js. Features include product listing and search, secure authentication, shopping cart & checkout, and an admin dashboard with role‑based access control for product and user management.",
+    image: "https://images.pexels.com/photos/5632381/pexels-photo-5632381.jpeg?auto=compress&cs=tinysrgb&w=600",
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "JWT", "RBAC"],
     github: "https://github.com/YogapraveenRavikumar2026/FSD_project",
     demo: "#",
     category: "web"
@@ -47,11 +47,30 @@ const projectsData: Project[] = [
   },
   {
     title: "Women Safety Alert System",
-    description: "Real-time threat detection and alert system using computer vision.",
-    longDescription: "A safety application that uses computer vision to detect potential threats and send instant alerts. Integrates with mobile devices for immediate response and location sharing.",
+    description: "Real‑time safety system with gesture detection and instant alerts.",
+    longDescription: "Designed a real‑time safety system using computer vision to detect emergency gestures and trigger immediate alerts. Integrated with an Arduino microcontroller via serial communication for rapid response and notifications.",
     image: "/projectImage/womensaftyImg.jpg",
-    tags: ["Python", "OpenCV", "IoT", "Alert System"],
+    tags: ["Python", "OpenCV", "Arduino", "TensorFlow", "Serial Communication"],
     github: "https://github.com/YogapraveenRavikumar2026/women-safty-",
+    category: "ai"
+  },
+  {
+    title: "Personal Portfolio Website",
+    description: "Responsive portfolio showcasing projects and skills, deployed on Vercel.",
+    longDescription: "Built a modern, responsive portfolio using React.js and TailwindCSS to highlight projects, skills, and experience. Focused on performance, accessibility, and clean UI; deployed on Vercel for fast global delivery.",
+    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600",
+    tags: ["React", "TailwindCSS", "Vercel"],
+    github: "#",
+    demo: "#",
+    category: "web"
+  },
+  {
+    title: "Knee Osteoarthritis Classification",
+    description: "CNN model classifying knee X‑rays for osteoarthritis detection.",
+    longDescription: "Developed a deep learning pipeline to classify knee X‑ray images for osteoarthritis detection. Utilized preprocessing, data augmentation, and a CNN in TensorFlow/Keras, achieving strong accuracy and F1‑score with clear visualizations.",
+    image: "https://images.pexels.com/photos/4226264/pexels-photo-4226264.jpeg?auto=compress&cs=tinysrgb&w=600",
+    tags: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN"],
+    github: "#",
     category: "ai"
   }
 ];
